@@ -5,7 +5,7 @@ import {motion} from "framer-motion";
 function About() {
   return (
     <section id="about">
-        <div className="border-b border-neutral-900 pb-4">
+        <div className="border-b border-neutral-900 pb-4 pt-[25px]">
         <h1 className="my-20 text-center text-4xl">
           About 
           <span className="text-neutral-500"> Me</span>

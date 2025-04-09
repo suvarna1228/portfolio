@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 const Contact=()=> {
   return (
     <section id='contact'>
-        <div className='border-b border-neutral-900 pb-200'>
+        <div className='border-b border-neutral-900 pb-200  pt-[25px]'>
          <motion.h1            
          whileInView={{opacity:1,y:0}}
            initial={{opacity:0,y:-100}}

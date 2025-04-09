@@ -19,6 +19,8 @@ import { GiGears } from "react-icons/gi";
 import { FaDraftingCompass } from "react-icons/fa"; 
 
 import { motion} from "framer-motion";
+import { useState } from "react";
+
 
 const iconVariants =(duration)=>({
   initial:{y:-10},
@@ -33,10 +35,39 @@ const iconVariants =(duration)=>({
   },
 })
 
+
+
+const tabData = {
+  Frontend: [
+    { icon: <RiReactjsLine className="text-7xl text-cyan-500" />, duration: 2.5 },
+    { icon: <SiTailwindcss className="text-7xl text-sky-400" />, duration: 4 },
+    { icon: <IoLogoJavascript className="text-7xl text-yellow-400" />, duration: 7 },
+    { icon: <SiBootstrap className="text-7xl text-purple-600" />, duration: 9 },
+    { icon: <FaCss3Alt className="text-7xl text-blue-600" />, duration: 2.5 },
+  ],
+  "Tech Tools": [
+    { icon: <SiFirebase className="text-7xl text-yellow-600" />, duration: 2.5 },
+    { icon: <BiLogoPostgresql className="text-7xl text-sky-700" />, duration: 5 },
+    { icon: <FaGithub className="text-7xl text-white" />, duration: 7 },
+    { icon: <SiVercel className="text-7xl text-white" />, duration: 4 },
+    { icon: <SiGooglesearchconsole className="text-7xl text-green-500" />, duration: 9 },
+  ],
+  "Other Skills": [
+    { icon: <SiCplusplus className="text-7xl text-blue-500" />, duration:2.5 },
+    { icon: <FaPython className="text-7xl text-yellow-400" />, duration: 4 },
+    { icon: <FaRegFileWord className="text-7xl text-blue-700" />, duration: 7 },
+    { icon: <GiGears className="text-7xl text-gray-400" />, duration: 4 },
+    { icon: <FaDraftingCompass className="text-7xl text-rose-400" />, duration: 2.5 },
+  ],
+};
+
+
+
 const Technologies = () => {
+  const [activeTab, setActiveTab] = useState("Frontend");
   return (
     <section id='technogies'>
-      <div className='border-b border-neutral-800 pb-24'>
+      <div className='border-b border-neutral-800 pb-24  pt-[25px]'>
         <motion.h2
                    whileInView={{opacity:1,y:0}}
                    initial={{opacity:0,y:-100}}
@@ -44,122 +75,42 @@ const Technologies = () => {
                     className='my-20 text-center text-4xl'>
         Technogies
         </motion.h2>
-        <motion.div 
-                   whileInView={{opacity:1,x:0}}
-                   initial={{opacity:0,x:-100}}
-                   transition={{duration:1.5}}
-                   className='flex flex-wrap items-center justify-center gap-4'>
-          
-          <motion.div
-                  variants={iconVariants(2.5)}
-                  initial="initial"
-                  animate="animate"
-                   className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <RiReactjsLine className="text-7xl text-cyan-500"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(4)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <SiTailwindcss className="text-7xl text-sky-400"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(7)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <IoLogoJavascript className="text-7xl text-yellow-400"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(9)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <SiBootstrap className="text-7xl text-purple-600"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(2.5)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <FaCss3Alt className="text-7xl text-blue-600"/>
-          </motion.div>
 
+        {/* Tabs */}
+        <div className="flex justify-center gap-4 mb-10">
+          {Object.keys(tabData).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`md:px-6 py-2 rounded-lg border px-1 md:text-xl text-sm ${
+                activeTab === tab
+                  ? "bg-neutral-900 text-white"
+                  : "bg-neutral-400 text-black border-cyan-600"
+              } transition`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
 
-          <motion.div 
-                  variants={iconVariants(9)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <SiFirebase className="text-7xl text-yellow-600"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(5)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <BiLogoPostgresql className="text-7xl text-sky-700"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(2.5)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <FaGithub className="text-7xl text-white"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(4)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <SiVercel className="text-7xl text-white"/>
-          </motion.div>
-
-          
-          <motion.div 
-                  variants={iconVariants(9)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <SiGooglesearchconsole className="text-7xl text-green-500"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(11)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <SiCplusplus className="text-7xl text-blue-500"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(3)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <FaPython className="text-7xl text-yellow-400"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(7)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <FaRegFileWord className="text-7xl text-blue-700"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(4)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <GiGears className="text-7xl text-gray-400"/>
-          </motion.div>
-          <motion.div 
-                  variants={iconVariants(2.5)}
-                  initial="initial"
-                  animate="animate"
-                  className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <FaDraftingCompass className="text-7xl text-rose-400"/>
-          </motion.div>
-
+        {/* Icons */}
+        <motion.div
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1.5 }}
+          className="flex flex-wrap items-center justify-center gap-4"
+        >
+          {tabData[activeTab].map((item, index) => (
+            <motion.div
+              key={index}
+              variants={iconVariants(item.duration)}
+              initial="initial"
+              animate="animate"
+              className="rounded-2xl border-4 border-neutral-800 p-4"
+            >
+              {item.icon}
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
