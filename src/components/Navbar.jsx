@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" md:px-10 mb-20 flex flex-col md:flex-row items-center justify-between md:py-2 fixed top-0 left-0 w-full z-50 shadow-md bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgb(120,119,198),black)]
+    <nav className=" md:px-10 mb-20 flex flex-col md:flex-row items-center justify-between md:py-2 fixed top-0 left-0 w-full z-50 shadow-md bg-[radial-gradient(ellipse_80%_80%_at_50%_-45%,rgb(120,119,145),black)]
 
 
 ">
