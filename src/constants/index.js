@@ -1,3 +1,4 @@
+
 import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
@@ -13,39 +14,34 @@ export const EXPERIENCES = [
     year: "2025 - Present",
     role: "junior Frontend Developer",
     company: "Natural Coders",
-    description: `Led a team in developing and maintaining web applications using JavaScript, HTML,Tailwindcss. Implemented RESTful APIs and integrated with . Collaborated with stakeholders to define project requirements and timelines.`,
+    description: `Completed a frontend development internship focused on building responsive and interactive web interfaces using HTML, CSS, JavaScript, and Tailwind CSS. Gained practical experience in integrating RESTful APIs, debugging UI issues, and contributing to real-world web projects. Collaborated with the development team to meet project goals, enhance user experience, and deliver clean, maintainable code.`,
     technologies: ["Javascript", "HTML", "Bootstrap", "TailwindCss"],
   },
 
 ];
 
 export const PROJECTS = [
+    {
+    title: "Landing Page",
+    image: project2,
+    description:
+      " A modern and responsive landing page for a consultancy company, designed to showcase business growth solutions and marketing services. Built using HTML, CSS, and JavaScript, the website emphasizes clean layout, smooth navigation, and conversion-focused design to attract potential clients.",
+    technologies: ["HTML", "CSS", "javascript"],
+    link:"https://aria-business.vercel.app/"
+  },
   {
     title: "E-Commerce Website",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+      "A responsive e-commerce website featuring product categories like electronics, clothing, and jewelry. Includes core functionalities such as dynamic product listing, category filtering, shopping cart, single product view, and checkout. Built using HTML, CSS, JavaScript, and Tailwind CSS with a focus on clean design and user-friendly experience.",
     technologies: ["HTML", "CSS",  "TailwindCss", "Javascript"],
-  },
-  {
-    title: "Landing Page",
-    image: project2,
-    description:
-      " Static Website of a consultancy company specializing in business growth using online marketing and conversion optimization tactics",
-    technologies: ["HTML", "CSS", "javascript"],
-  },
-  {
-    title: "Random color generating website",
-    image: project3,
-    description:
-      " A platform designed to provide comprehensive information on different color models such as RGB, CMY, and Web Safe Colors. Understanding color models is essential for designers, developers, and anyone working with digital media.",
-    technologies: ["HTML", "CSS","javascript", "Bootstrap"],
+    link:"https://suvarna1228.github.io/Zylomart/"
   },
   {
     title: "Movie-Series Website",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
+      "A dynamic web platform that allows users to explore and track movies and TV series. Features include detailed information on titles, trailers, genres, ratings, and user reviews. Users can create watchlists, browse trending and upcoming releases, and get personalized recommendations based on their interests.",
     technologies: ["HTML", "Tailwindcss", "React.js", "FireBase"],
   },
 ];

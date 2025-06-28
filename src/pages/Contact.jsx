@@ -1,6 +1,6 @@
 import React from 'react'
 import { CONTACT } from '../constants'
-import { FcGoogle } from 'react-icons/fc'
+import { FaEnvelope } from "react-icons/fa6"
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
@@ -22,12 +22,12 @@ const Contact=()=> {
             {/* <p className="my-4">Feel free to reach out to me via email</p> */}
               <div className="flex gap-4 text-center justify-center my-10">
 
+                <a href={`mailto:${CONTACT.email}`} className="flex justify-center items-center">
+                   <FaEnvelope size={40} />
+                 </a>
                 <a href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center text-sky-500">
                    <FaLinkedin size={40} />
                 </a>
-                <a href={`mailto:${CONTACT.email}`} className="flex justify-center items-center">
-                   <FcGoogle size={40} />
-                 </a>
                   <a href={CONTACT.github} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center ">
                      <FaGithub size={40} />
                   </a>

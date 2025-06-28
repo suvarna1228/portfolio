@@ -24,7 +24,7 @@ function About() {
           whileInView={{opacity:1,x:0}}
           initial={{opacity:0,x:100}}
           transition={{duration:0.5}}
-          className="w-full lg:w-1/2">
+          className="w-full lg:w-1/2 font-light tracking-tighter">
              <div className="flex justify-center lg:justify-start">
                <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p> 
              </div>
