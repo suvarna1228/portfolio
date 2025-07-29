@@ -10,7 +10,7 @@ export const ABOUT_TEXT = `I am a dedicated and versatile Frontend developer wit
 
 export const EXPERIENCES = [
   {
-    year: "Janury 2025 - June 2025",
+    year: "January 2025 - June 2025",
     role: "junior Frontend Developer",
     company: "Natural Coders",
     description: `Completed a frontend development internship focused on building responsive and interactive web interfaces using HTML, CSS, JavaScript, and Tailwind CSS. Gained practical experience in integrating RESTful APIs, debugging UI issues, and contributing to real-world web projects. Collaborated with the development team to meet project goals, enhance user experience, and deliver clean, maintainable code.`,
